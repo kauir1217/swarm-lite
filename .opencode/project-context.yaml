@@ -1,0 +1,49 @@
+# 项目上下文配置 — 供 Skill 读取
+# 每个项目一份，定义项目特定的路径、包名、服务列表等
+# Skill 中的通用规则 + 此配置 = 完整执行上下文
+#
+# 使用方式：运行 scripts/init-project.sh 自动填充，或手动编辑
+
+project_name: ""
+project_desc: ""          # 项目简述，如「客户管理系统」
+repo_path: ""             # 代码仓库本地路径，如 /mnt/d/workspace/myproject/src
+repo_readonly: false      # 是否只读（分析模式）
+
+# Java 包路径（如适用）
+# group_id: com.example.myproject
+# 包路径模式：{group_id}.{service_pkg}.{module}.xxx.extend
+
+# 微服务列表（如适用）
+# services:
+#   - name: 示例服务
+#     key: demo
+#     pkg: demopkg
+#     artifact: my-demo-service
+#     app: app-demo
+#     dev_port: 8080
+
+# 数据库（如适用）
+# database:
+#   type: MySQL
+#   sql_dialect: MySQL
+#   flyway_naming: "VYYYYMMDD.NN__description.sql"
+
+# 基础设施（如适用）
+# infra:
+#   git: https://github.com/your-org/your-repo.git
+#   nacos: ""
+#   nexus: ""
+#   docker_registry: ""
+
+# 文档入口
+docs_nav: docs/文档导航.md
+
+# 项目专属文档
+# project_docs:
+#   architecture: docs/specs/xxx-系统架构.md
+
+# browser-copilot 配置（可选，不配则用默认值）
+# browser_copilot:
+#   routes:
+#     platform:
+#       url: "https://your-platform.example.com"  # "打开网站/平台"的导航目标

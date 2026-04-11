@@ -1,0 +1,11 @@
+{
+  "name": "project-template-lite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "init:project": "bash scripts/init-project.sh",
+    "deps:install": "bash scripts/install-deps.sh",
+    "bootstrap": "bash scripts/bootstrap.sh",
+    "skills:catalog": "node .opencode/skills/skills-catalog-export/scripts/update-skills-catalog.mjs"
+  }
+}

@@ -1,0 +1,29 @@
+# 依赖
+node_modules/
+
+# 环境与凭据
+.env
+*.yaml.secret
+accounts.yaml
+
+# 运行时产物
+.opencode/context/
+.opencode/state/
+.opencode/logs/
+.opencode/artifacts/
+.opencode/node_modules/
+
+# 浏览器截图
+.agent-screenshots/
+test.png
+
+# IDE
+.idea/
+.vscode/
+
+# 协作工作区
+collab/
+
+# OS
+.DS_Store
+Thumbs.db
