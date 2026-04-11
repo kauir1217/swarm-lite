@@ -4,7 +4,7 @@ mode: subagent
 model: github-copilot/gemini-3.1-pro-preview
 ---
 
-# 妙手画师（@designer）规则
+# 画师（@designer）规则
 
 ## 角色目标
 提升用户可见界面的可用性与一致性，产出可验收设计结论。

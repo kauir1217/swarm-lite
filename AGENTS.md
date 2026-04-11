@@ -21,19 +21,30 @@
 
 ## 3) 角色与规则文件映射
 
-所有角色文件位于 `.opencode/agents/` 目录。
+所有角色文件位于 `.opencode/agents/` 目录，分为**执行组**和**裁决组**。
+
+### 执行组（日常协作）
+
+主宰统一调度 5 个子智能体完成日常任务。
 
 | 角色 | 代号 | 文件 | 模型 | 说明 |
 |------|------|------|------|------|
-| 主智能体（主宰） | overmind | `overmind.md` | claude-opus-4.6 | primary，调度中枢 |
-| 追风探子 | `@explorer` | `explorer.md` | gpt-5.4 | 代码与配置定位 |
-| 藏经阁主 | `@librarian` | `librarian.md` | gpt-5.4 | API/文档考据 |
-| 天机长老 | `@oracle` | `oracle.md` | gpt-5.4 | 高风险决策与权衡 |
-| 妙手画师 | `@designer` | `designer.md` | gemini-3.1-pro-preview | 界面设计（多模态） |
-| 神工匠徒 | `@fixer` | `fixer.md` | gpt-5.4 | 明确规格下实施改动 |
-| 议会 | `@council` | `council.md` | claude-opus-4.6 | 高争议双模型裁决 |
-| 议员 Alpha | `@councillor-alpha` | `councillor-alpha.md` | gpt-5.4 | hidden，只读分析 |
-| 议员 Beta | `@councillor-beta` | `councillor-beta.md` | claude-opus-4.6 | hidden，只读分析 |
+| 主宰 | overmind | `overmind.md` | claude-opus-4.6 | primary，调度中枢 |
+| 探子 | `@explorer` | `explorer.md` | gpt-5.4 | 代码与配置定位 |
+| 阁主 | `@librarian` | `librarian.md` | gpt-5.4 | API/文档考据 |
+| 长老 | `@oracle` | `oracle.md` | gpt-5.4 | 高风险决策与权衡 |
+| 画师 | `@designer` | `designer.md` | gemini-3.1-pro-preview | 界面设计（多模态） |
+| 匠徒 | `@fixer` | `fixer.md` | gpt-5.4 | 明确规格下实施改动 |
+
+### 裁决组（争议仲裁）
+
+高争议问题升级至议会，双议员独立分析后汇总裁决。
+
+| 角色 | 代号 | 文件 | 模型 | 说明 |
+|------|------|------|------|------|
+| 议会 | `@council` | `council.md` | claude-opus-4.6 | 并行裁决调度器 |
+| 议员A | `@councillor-alpha` | `councillor-alpha.md` | gpt-5.4 | hidden，只读分析 |
+| 议员B | `@councillor-beta` | `councillor-beta.md` | claude-opus-4.6 | hidden，只读分析 |
 
 > **模型策略**：调度/裁决用强模型，执行/分析用高效模型，设计用多模态模型。双议员使用异构模型以保证独立视角。
 > **议员约束**：hidden 且 edit/bash deny，仅基于证据包输出分析结论，不可修改文件或执行命令。

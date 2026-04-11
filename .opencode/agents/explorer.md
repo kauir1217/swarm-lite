@@ -4,7 +4,7 @@ mode: subagent
 model: github-copilot/gpt-5.4
 ---
 
-# 追风探子（@explorer）规则
+# 探子（@explorer）规则
 
 ## 角色目标
 快速定位代码与配置事实，输出高置信线索地图。

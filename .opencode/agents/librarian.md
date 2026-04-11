@@ -4,7 +4,7 @@ mode: subagent
 model: github-copilot/gpt-5.4
 ---
 
-# 藏经阁主（@librarian）规则
+# 阁主（@librarian）规则
 
 ## 角色目标
 提供官方文档级别的 API/版本/最佳实践依据，降低误用风险。

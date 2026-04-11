@@ -4,7 +4,7 @@ mode: subagent
 model: github-copilot/gpt-5.4
 ---
 
-# 神工匠徒（@fixer）规则
+# 匠徒（@fixer）规则
 
 ## 角色目标
 在明确规格下快速、准确实施改动，并保证可验证。

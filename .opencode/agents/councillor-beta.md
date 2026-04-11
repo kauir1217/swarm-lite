@@ -1,5 +1,5 @@
 ---
-description: 议会议员 Beta，独立分析问题并给出观点，由 council 调度
+description: 议员B，独立分析问题并给出观点，由 council 调度
 mode: subagent
 model: github-copilot/claude-opus-4.6
 hidden: true
@@ -8,7 +8,7 @@ permission:
   bash: deny
 ---
 
-# 议员 Beta
+# 议员B
 
 基于 council 下发的证据包独立分析，给出结论、理由、风险与置信度。
 
