@@ -153,6 +153,20 @@ npm install -g agent-browser
             └── @councillor-beta（议员B）
 ```
 
+## 通用 Skill
+
+模板内置 5 个项目级 Skill，智能体在匹配场景时自动加载：
+
+| Skill | 触发方式 | 说明 |
+|-------|---------|------|
+| browser-copilot | 说"智能体协同"/"协同浏览"/"browser copilot" | 通过 CDP 实时观察和操作 Windows Chrome 浏览器，支持指定端口和自动导航任务 |
+| outline-first-writing | 预估产出超 500 行或含 3+ 章节时自动触发 | 强制大纲优先工作流：先产出结构大纲经确认，再展开正文或代码实现 |
+| history-timeline-export | 说"导出历史"/"export history" | 按时间范围导出对话历史为摘要 + 时间线文档，只保留用户请求和助手回复 |
+| skills-catalog-export | 说"技能目录"/"skills catalog" | 自动扫描并生成完整技能目录表，含分类、描述、触发条件和文件路径 |
+| windows-vpn-localhost-proxy | 说"VPN 代理"/"localhost proxy" | 为仅通过 Windows VPN 可达的 URL 创建临时本地端口映射，供 WSL/浏览器自动化使用 |
+
+> 依赖：browser-copilot 需要全局安装 `agent-browser`（见"快速开始"第 3 步）。其余 Skill 无额外依赖。
+
 ## 与完整版（tmpl）的区别
 
 | 特性 | tmpl（完整版） | tmpl-lite（本模板） |
