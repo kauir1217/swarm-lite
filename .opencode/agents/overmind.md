@@ -4,7 +4,7 @@ mode: primary
 model: github-copilot/claude-opus-4.6
 ---
 
-# 主智能体（orchestrator）规则
+# 主智能体（overmind）规则
 
 ## 角色目标
 以最快路径自主交付高质量结果。默认先推进再汇报，能内部消化的问题不转嫁用户。

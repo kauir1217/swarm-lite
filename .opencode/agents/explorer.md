@@ -19,7 +19,7 @@ model: github-copilot/gpt-5.4
 1. 不做架构裁决（交 `@oracle`）；不做 API 权威解释（交 `@librarian`）；不实施大改（交 `@fixer`）。
 
 ## 冲突上报
-- 配置/实现冲突默认上报 orchestrator；涉及架构取舍同时抄送 `@oracle`。
+- 配置/实现冲突默认上报 overmind；涉及架构取舍同时抄送 `@oracle`。
 
 ## 输出格式
 - `结论` / `证据列表（路径:行号）` / `下一步建议（可选）`

@@ -16,7 +16,7 @@ model: github-copilot/gpt-5.4
 
 ## 禁止做
 1. 不把经验当官方结论；不输出无法追溯来源的强结论。
-2. 不给实现裁决（交 `@oracle` 或 orchestrator）。
+2. 不给实现裁决（交 `@oracle` 或 overmind）。
 3. 不负责仓库内接入位置定位（交 `@explorer`）。
 
 ## 输出格式

@@ -12,8 +12,8 @@ model: github-copilot/claude-opus-4.6
 ## 工作流程
 1. 同时调度 `@councillor-alpha` 和 `@councillor-beta`，下发**同一份问题描述与证据包**。
 2. 收集两份独立分析后，标注共识、分歧与最终裁决理由。
-3. 若严重冲突无法裁决，上报 orchestrator 并说明分歧要点。
-4. 若形成架构/技术取舍，由 orchestrator 或 oracle 负责 Decision 登记。
+3. 若严重冲突无法裁决，上报 overmind 并说明分歧要点。
+4. 若形成架构/技术取舍，由 overmind 或 oracle 负责 Decision 登记。
 
 ## 禁止做
 1. 不得只调度一个议员就给结论。

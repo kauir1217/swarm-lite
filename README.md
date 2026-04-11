@@ -92,7 +92,7 @@ npm install -g agent-browser
     ├── project-context.yaml           # 项目上下文配置
     ├── package.json                   # OpenCode 插件依赖
     ├── agents/                        # 9 个智能体角色
-    │   ├── orchestrator.md            # 主智能体（调度中枢）
+    │   ├── overmind.md                 # 主宰（调度中枢）
     │   ├── explorer.md                # 代码与配置定位
     │   ├── librarian.md               # API/文档考据
     │   ├── oracle.md                  # 高风险决策与权衡
@@ -117,7 +117,7 @@ npm install -g agent-browser
 
 | 角色 | 代号 | 模型 | 说明 |
 |------|------|------|------|
-| 主智能体 | orchestrator | claude-opus-4.6 | **调度中枢**。以最快路径自主推进任务，能内部消化的问题不打断用户。负责任务分解、子智能体委派、结果验证与汇报。决策升级路径：自判 → 咨询 @oracle → 才问用户 |
+| 主宰 | overmind | claude-opus-4.6 | **调度中枢**。以最快路径自主推进任务，能内部消化的问题不打断用户。负责任务分解、子智能体委派、结果验证与汇报。决策升级路径：自判 → 咨询 @oracle → 才问用户 |
 | 议会 | @council | claude-opus-4.6 | **并行裁决器**。仅在高争议问题需要双模型独立裁决时启用，同时调度两位议员下发相同证据包，收集独立分析后汇总裁决 |
 
 ### 子智能体（Subagent）
@@ -144,7 +144,7 @@ npm install -g agent-browser
 ### 协作流程
 
 ```
-用户请求 → orchestrator 自主推进
+用户请求 → overmind 自主推进
               ├── 需要定位代码 → @explorer
               ├── 需要查文档 → @librarian
               ├── 需要技术决策 → @oracle
